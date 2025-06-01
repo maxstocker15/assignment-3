@@ -21,5 +21,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/assignment-3-web:latest ./app
+          docker build -t ghcr.io/${{ github.actor }}/assignment-3-web:latest ./app
           docker push ghcr.io/${{ github.repository_owner }}/assignment-3-web:latest
