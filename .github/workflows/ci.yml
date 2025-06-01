@@ -16,10 +16,10 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: maxstocker15
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ghcr.io/maxstocker15/assignment-3-web:latest ./app
-          docker push ghcr.io/maxstocker15/assignment-3-web:latest
+          docker build -t ghcr.io/${{ github.actor }}/assignment-3-web:latest ./app
+          docker push ghcr.io/${{ github.actor }}/assignment-3-web:latest
