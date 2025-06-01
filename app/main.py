@@ -9,6 +9,8 @@ DB_NAME = os.environ.get("DB_NAME", "test")
 DB_USER = os.environ.get("DB_USER", "user")
 DB_PASS = os.environ.get("DB_PASS", "password")
 
+print("v2")
+
 def get_db_connection():
     return psycopg2.connect(
         host=DB_HOST,
